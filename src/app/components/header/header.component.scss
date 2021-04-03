@@ -1,0 +1,51 @@
+@import "src/styles/colors";
+
+.header-top-cover {
+  padding: 13px 0;
+  background-color: map-get($blue-palette, 500);
+
+  .header-top-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+    font-size: 12px;
+
+    .header-top-info {
+      font-family: Montserrat, serif;
+    }
+  }
+}
+
+.header-main-cover {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+
+  .header-main-content {
+    display: flex;
+    align-items: center;
+    padding: 13px 0;
+
+    .logo-cover {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 700;
+      color: map-get($blue-palette, 500);
+
+      img {
+        margin-right: 10px;
+      }
+    }
+
+    .header-link {
+      margin-left: 45px;
+      font-size: 14px;
+    }
+
+    .login-link {
+      margin-left: auto;
+      font-size: 14px;
+      color: map-get($gray-palette, 200);
+    }
+  }
+}

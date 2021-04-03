@@ -1,0 +1,81 @@
+@import "src/styles/colors";
+
+.footer-cover {
+  background-color: map-get($blue-palette, 500);
+
+  .footer-container {
+    max-width: 1100px;
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+  .footer-top-cover {
+    border-bottom: 1px solid $white;
+
+    .footer-container {
+      display: flex;
+      padding: 20px;
+
+      .logo-cover {
+        display: flex;
+        align-items: center;
+        font-size: 34px;
+        font-weight: 700;
+        font-family: Montserrat, serif;
+        color: $white;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+
+      .footer-links-cover {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        .footer-link {
+          text-transform: uppercase;
+          color: $white;
+
+          &:not(:first-child) {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-main-cover {
+    border-bottom: 1px solid $white;
+    padding: 40px 0;
+
+    .footer-main-items {
+      display: flex;
+      justify-content: space-between;
+
+      .footer-main-item {
+        color: $white;
+        font-size: 14px;
+        font-family: Montserrat, serif;
+
+        .footer-main-head {
+          font-weight: 700;
+        }
+
+        .footer-main-text {
+          display: block;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .footer-bottom-cover {
+    text-align: center;
+    color: $white;
+    padding: 25px 0;
+    font-family: Montserrat, serif;
+    font-size: 14px;
+  }
+}
