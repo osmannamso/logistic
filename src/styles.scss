@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "styles/common";
+@import "styles/fonts";
+@import "styles/key-values";
+@import "styles/icons";
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: TT Firs Neue, serif;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+.container {
+  width: 1240px;
+  min-width: 1240px;
+  margin: 0 auto;
+}
+
+@media (max-width: 679px) {
+  .container {
+    width: 100%;
+    padding: 0 16px;
+    min-width: unset;
+  }
+}

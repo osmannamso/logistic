@@ -1,0 +1,166 @@
+<div class="main-cover">
+  <div class="main-block-overlay"></div>
+  <div class="main-content container">
+    <img src="/assets/images/woman-power.png" class="main-block-img" />
+    <div class="main-info-cover">
+      <div class="main-info-company">
+        <img src="/assets/images/white-logo.png" /> Yermesgroup
+      </div>
+      <div class="main-text">
+        Помогаем интернет-магазинам зарабатывать больше
+      </div>
+      <div class="main-support">
+        Наш фулфилмент сервис освободит ваше время и ресурсы для маштабирования бизнеса
+      </div>
+    </div>
+  </div>
+</div>
+<div class="support-cover">
+  <div class="container">
+    <h3>Помогаем интернет-магазинам зарабатывать больше</h3>
+    <div class="support-info">
+      Добро пожаловать в  Yermesgroup, где мы специализируемся на решениях по выполнению заказов и логистике электронной коммерции для предприятий по всему миру.
+      <br /><br />
+      Наша дружная и эффективная команда предлагает гораздо больше, чем просто выполнение ваших заказов. Мы работаем в партнерстве с каждым из наших клиентов, создавая для них правильные логистические решения, которые помогают им развивать свои онлайн-продажи за рубежом и в странах СНГ. Тщательно понимая и обращаясь к потребностям наших клиентов, мы помогли многим в их росте от первоначальной отправки нескольких сотен заказов в месяц до многотысячных поставок по всему миру каждый месяц.
+      <br /><br />
+      Мы упорно работаем, чтобы удовлетворить и превзойти ожидания наших клиентов, принимая все сложности логистики.
+      Доверьте Yermesgroup выполнение ваших заказов, как и многие другие.
+    </div>
+  </div>
+</div>
+<div class="advantages-cover">
+  <div class="container">
+    <h3>Наши преимущества</h3>
+    <div class="advantage-items">
+      <div *ngFor="let advantage of landingData?.advantages; let isLast = last" class="advantage-item">
+        <div class="advantage-geometry">
+          <span class="advantage-circle"></span>
+          <span *ngIf="!isLast" class="advantage-line"></span>
+        </div>
+        <p class="advantage-name">{{ advantage.name }}</p>
+        <p class="advantage-description">
+          {{ advantage.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="how-works-cover">
+  <div class="container">
+    <h3>КАК ЭТО РАБОТАЕТ?</h3>
+    <div class="how-works-items">
+      <div *ngFor="let howWork of landingData?.howWorks" class="how-works-item">
+        <div class="how-works-number">{{ howWork.index }}</div>
+        <p class="how-works-name">
+          {{ howWork.name }}
+        </p>
+        <div class="how-works-description">
+          {{ howWork.description }}
+        </div>
+      </div>
+    </div>
+    <div class="how-works-tasks">
+      <div *ngFor="let howTask of landingData?.howTasks" class="how-task-item">
+        <h4>{{ howTask.name }}</h4>
+        <div class="how-task-options">
+          <div *ngFor="let option of howTask.options" class="how-task-option">{{ option }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="comments-cover">
+  <div class="position-relative container">
+    <div class="comments-content">
+      <h3>Отзывы наших клиентов</h3>
+      <div class="comments-item">
+        <img src="/assets/images/two-dots.png" class="two-dots" />
+        <div class="comment-content" [innerHTML]="landingData?.comments[currentCommentIndex].content"></div>
+        <div class="d-flex a-items-center j-content-between m-t-30">
+          <div>
+            <div class="comment-name">{{ landingData?.comments[currentCommentIndex].name }}</div>
+            <div class="comment-profession">{{ landingData?.comments[currentCommentIndex].profession }}</div>
+            <div class="comment-dots">
+              <button *ngFor="let dot of landingData?.comments; let i = index" (click)="setCurrent(i)"
+                      type="button" class="comment-dot" [class.active]="currentCommentIndex == i">
+              </button>
+            </div>
+          </div>
+          <img src="/assets/images/russia-mail.png" class="mail-marker" />
+        </div>
+      </div>
+    </div>
+    <img src="/assets/images/just-woman.png" class="comment-banner-img" />
+  </div>
+</div>
+<div class="worldmap-cover">
+  <div class="container">
+    <h3>География услуг</h3>
+    <img src="/assets/images/geography.png" />
+  </div>
+</div>
+<div class="feedback-cover">
+  <div class="container">
+    <h3>Свяжитесь с нами</h3>
+    <div class="feedback-additional">Вы можете написать нам по любому интересующему вас вопросу: от консультации до сотрудничества</div>
+    <form class="form-group">
+      <div class="d-flex j-content-center">
+        <label class="form-label">
+          <input type="text" placeholder="Введите ваше имя" class="form-control" />
+        </label>
+        <label class="form-label --phone">
+          <input type="text" placeholder="Введите ваш номер: +7 (- - -) - - -  - -  - -" class="form-control" />
+        </label>
+      </div>
+      <label class="form-label --comment">
+        <textarea placeholder="Введите ваш комментарий" class="form-control --comment"></textarea>
+      </label>
+      <div class="form-additional">
+        <span class="form-tip">
+          Заполняя данную форму, Вы соглашаетесь c <a>условиями обработки</a> персональных данных. Мы гарантируем конфиденциальность Вашего обращения!
+        </span>
+        <button type="submit" class="form-btn">
+          Заказать звонок
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="contacts-cover">
+  <div class="contacts-container">
+    <h3>Наши контакты</h3>
+    <div class="contact-support">
+      Более 25 профессиональных центров обслуживания наших клиентов
+    </div>
+    <div class="contact-items">
+      <div *ngFor="let contact of landingData?.contacts" class="contact-item">
+        <div class="contact-city">{{ contact.city }}</div>
+        <div class="contact-name">{{ contact.name }}</div>
+        <div class="contact-street">{{ contact.street }}</div>
+        <div class="contact-ways">
+          <div class="contact-way">
+            <span class="icon-cover">
+              <span class="icon i-phone"></span>
+            </span>
+            {{ contact.phone }}
+          </div>
+          <div class="contact-way">
+            <span class="icon-cover">
+              <span class="icon i-whatsapp"></span>
+            </span>
+            {{ contact.whatsapp }}
+          </div>
+          <div class="contact-way">
+            <span class="icon-cover">
+              <span class="icon i-telegram"></span>
+            </span>
+            {{ contact.telegram }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="map-cover">
+  <div id="YMapsID" class="yandex-map"></div>
+</div>
