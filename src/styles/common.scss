@@ -1,0 +1,18 @@
+.--mobile {
+  display: none;
+}
+
+.bare-btn {
+  background-color: transparent;
+  border: none;
+}
+
+@media (max-width: 679px) {
+  .--desktop {
+    display: none;
+  }
+
+  .--mobile {
+    display: block;
+  }
+}

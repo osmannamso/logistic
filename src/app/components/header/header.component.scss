@@ -49,3 +49,20 @@
     }
   }
 }
+
+.header-mobile-cover {
+  padding: 10px 0;
+  position: relative;
+  text-align: center;
+
+  .burger-btn {
+    position: absolute;
+    top: 22px;
+    left: 10px;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

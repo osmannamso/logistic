@@ -79,3 +79,31 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 679px) {
+  .footer-cover {
+    .footer-top-cover {
+      display: none;
+    }
+
+    .footer-container {
+      max-width: 100%;
+      width: 100%;
+
+      .footer-main-items {
+        padding: 0 15px;
+
+        .footer-main-item {
+          &:not(:first-child) {
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+
+    .footer-bottom-cover {
+      font-size: 12px;
+      padding: 15px 0;
+    }
+  }
+}

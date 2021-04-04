@@ -35,7 +35,7 @@
       <div *ngFor="let advantage of landingData?.advantages; let isLast = last" class="advantage-item">
         <div class="advantage-geometry">
           <span class="advantage-circle"></span>
-          <span *ngIf="!isLast" class="advantage-line"></span>
+          <span class="advantage-line" [class.is-last]="isLast"></span>
         </div>
         <p class="advantage-name">{{ advantage.name }}</p>
         <p class="advantage-description">
@@ -76,7 +76,7 @@
       <div class="comments-item">
         <img src="/assets/images/two-dots.png" class="two-dots" />
         <div class="comment-content" [innerHTML]="landingData?.comments[currentCommentIndex].content"></div>
-        <div class="d-flex a-items-center j-content-between m-t-30">
+        <div class="comment-info-cover m-t-30">
           <div>
             <div class="comment-name">{{ landingData?.comments[currentCommentIndex].name }}</div>
             <div class="comment-profession">{{ landingData?.comments[currentCommentIndex].profession }}</div>
@@ -104,7 +104,7 @@
     <h3>Свяжитесь с нами</h3>
     <div class="feedback-additional">Вы можете написать нам по любому интересующему вас вопросу: от консультации до сотрудничества</div>
     <form class="form-group">
-      <div class="d-flex j-content-center">
+      <div class="form-name-phone">
         <label class="form-label">
           <input type="text" placeholder="Введите ваше имя" class="form-control" />
         </label>
