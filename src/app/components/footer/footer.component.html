@@ -1,3 +1,41 @@
+<div class="contacts-cover">
+  <div class="contacts-container">
+    <h3>Наши контакты</h3>
+    <div class="contact-support">
+      Более 25 профессиональных центров обслуживания наших клиентов
+    </div>
+    <div class="contact-items">
+      <div *ngFor="let contact of landingData?.contacts" class="contact-item">
+        <div class="contact-city">{{ contact.city }}</div>
+        <div class="contact-name">{{ contact.name }}</div>
+        <div class="contact-street">{{ contact.street }}</div>
+        <div class="contact-ways">
+          <div class="contact-way">
+            <span class="icon-cover">
+              <span class="icon i-phone"></span>
+            </span>
+            {{ contact.phone }}
+          </div>
+          <div class="contact-way">
+            <span class="icon-cover">
+              <span class="icon i-whatsapp"></span>
+            </span>
+            {{ contact.whatsapp }}
+          </div>
+          <div class="contact-way">
+            <span class="icon-cover">
+              <span class="icon i-telegram"></span>
+            </span>
+            {{ contact.telegram }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="map-cover">
+  <div id="YMapsID" class="yandex-map"></div>
+</div>
 <div class="footer-cover">
   <div class="footer-top-cover">
     <div class="footer-container">

@@ -7,13 +7,19 @@ import { LandingComponent } from './components/landing/landing.component';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
+import { FulfillmentComponent } from './components/fulfillment/fulfillment.component';
+import { FulfillmentBaseComponent } from './components/fulfillment-base/fulfillment-base.component';
+import { FulfillmentRegionComponent } from './components/fulfillment-region/fulfillment-region.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LandingComponent,
-    FooterComponent
+    FooterComponent,
+    FulfillmentComponent,
+    FulfillmentBaseComponent,
+    FulfillmentRegionComponent
   ],
   imports: [
     BrowserModule,

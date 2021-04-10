@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="breadcrumbs-cover">
+    <a>Главная</a> / <a class="active">Услуги Фулфилмент</a>
+  </div>
+  <h2>Услуги Фулфилмента</h2>
+  <div class="fulfillment-cover">
+    <div class="fulfillment-menu-cover">
+      <div class="fulfillment-menu">
+        <a routerLink="/fulfillment/base" class="fulfillment-menu-item" routerLinkActive="active">Основа</a>
+        <a routerLink="/fulfillment/region" class="fulfillment-menu-item" routerLinkActive="active">Региональные складские помещения</a>
+        <a class="fulfillment-menu-item" routerLinkActive="active">Проверка наличия товаров по артикулам</a>
+        <a class="fulfillment-menu-item" routerLinkActive="active">Доставка</a>
+        <a class="fulfillment-menu-item" routerLinkActive="active">Приём заказов</a>
+        <a class="fulfillment-menu-item" routerLinkActive="active">Упаковка</a>
+        <a class="fulfillment-menu-item" routerLinkActive="active">Отслеживание статуса доставки</a>
+      </div>
+    </div>
+    <div class="fulfillment-main-cover">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
