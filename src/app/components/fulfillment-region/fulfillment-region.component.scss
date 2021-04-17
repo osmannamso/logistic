@@ -1,0 +1,55 @@
+@import "src/styles/colors";
+
+.region-actions {
+  margin-top: 25px;
+
+  .region-btn {
+    padding: 15px 40px;
+    border: 1px solid transparent;
+    background-color: rgba(map-get($blue-palette, 500), 0.11);
+
+    &:not(:first-child) {
+      margin-left: 25px;
+    }
+
+    &.active {
+      background-color: $white;
+      border: 1px solid map-get($blue-palette, 500);
+    }
+  }
+}
+
+.base-description {
+  margin-top: 20px;
+}
+
+.region-price-cover {
+  margin-top: 20px;
+  border: 1px solid map-get($gray-palette, 300);
+
+  .region-price-head {
+    display: flex;
+    justify-content: space-between;
+    color: map-get($gray-palette, 700);
+    padding: 20px 34px;
+    border-bottom: 1px solid map-get($gray-palette, 300);
+  }
+
+  .region-price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 34px;
+    border-bottom: 1px solid map-get($gray-palette, 300);
+  }
+}
+
+.region-price-overall {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  background-color: rgba(map-get($blue-palette, 500), 0.11);
+  padding: 20px 34px;
+  font-size: 20px;
+  font-weight: 500;
+  color: map-get($blue-palette, 500);
+}

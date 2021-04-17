@@ -1,0 +1,42 @@
+@import "src/styles/colors";
+
+.support-head {
+  margin-top: 25px;
+}
+
+.base-step-cover {
+  border-left: 4px solid map-get($blue-palette, 500);
+  margin-top: 20px;
+  padding: 30px;
+
+  .base-step-item {
+    position: relative;
+
+    &:not(:first-child) {
+      margin-top: 60px;
+    }
+
+    .base-number {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      left: -45px;
+      top: -5px;
+      color: $white;
+      background-color: map-get($blue-palette, 500);
+    }
+
+    .base-step-name {
+      color: map-get($blue-palette, 500);
+      font-size: 15px;
+    }
+
+    .base-step-description {
+      margin-top: 20px;
+    }
+  }
+}
