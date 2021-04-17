@@ -193,10 +193,11 @@ h3 {
         margin-left: 20px;
       }
 
-      h4 {
+      a {
         color: map-get($blue-palette, 500);
         font-size: 18px;
         font-weight: 600;
+        text-decoration: none;
       }
 
       .how-task-options {
@@ -471,7 +472,24 @@ h3 {
     }
 
     .how-works-tasks {
-      display: none;
+      flex-direction: column;
+
+      .how-task-item {
+        width: 100%;
+        padding: 20px;
+
+        &:not(:first-child) {
+          margin-top: 15px;
+          margin-left: 0;
+        }
+
+        .how-task-options {
+          .how-task-option {
+            flex: 1 1 46%;
+            max-width: 50%;
+          }
+        }
+      }
     }
   }
 
@@ -519,5 +537,18 @@ h3 {
         }
       }
     }
+  }
+
+  .worldmap-item {
+    background-color: map-get($blue-palette, 500);
+    padding: 5px;
+    color: $white;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .worldmap-description {
+    text-align: center;
+    margin-top: 10px;
   }
 }

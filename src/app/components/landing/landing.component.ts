@@ -31,4 +31,8 @@ export class LandingComponent implements OnInit {
   public setCurrent(index: number): void {
     this.currentCommentIndex = index;
   }
+
+  public scrollToTop(): void {
+    window.scrollTo(0, 0);
+  }
 }

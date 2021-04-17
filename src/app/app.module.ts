@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LandingComponent } from './components/landing/landing.component';
 import {AppRoutingModule} from './app-routing.module';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { FulfillmentComponent } from './components/fulfillment/fulfillment.component';
 import { FulfillmentBaseComponent } from './components/fulfillment-base/fulfillment-base.component';
 import { FulfillmentRegionComponent } from './components/fulfillment-region/fulfillment-region.component';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateMethods} from './shared/helpers/translate-methods';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,15 @@ import { FulfillmentRegionComponent } from './components/fulfillment-region/fulf
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'ru',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: TranslateMethods.createTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

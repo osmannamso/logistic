@@ -15,7 +15,7 @@
     </div>
   </div>
 </div>
-<div class="support-cover">
+<div class="support-cover" id="support">
   <div class="container">
     <h3>Помогаем интернет-магазинам зарабатывать больше</h3>
     <div class="support-info">
@@ -45,7 +45,7 @@
     </div>
   </div>
 </div>
-<div class="how-works-cover">
+<div class="how-works-cover" id="how-works">
   <div class="container">
     <h3>КАК ЭТО РАБОТАЕТ?</h3>
     <div class="how-works-items">
@@ -61,7 +61,7 @@
     </div>
     <div class="how-works-tasks">
       <div *ngFor="let howTask of landingData?.howTasks" class="how-task-item">
-        <h4>{{ howTask.name }}</h4>
+        <a (click)="scrollToTop()" [routerLink]="howTask.link">{{ howTask.name }}</a>
         <div class="how-task-options">
           <div *ngFor="let option of howTask.options" class="how-task-option">{{ option }}</div>
         </div>
@@ -69,7 +69,7 @@
     </div>
   </div>
 </div>
-<div class="comments-cover">
+<div class="comments-cover" id="comments">
   <div class="position-relative container">
     <div class="comments-content">
       <h3>Отзывы наших клиентов</h3>
@@ -93,10 +93,33 @@
     <img src="/assets/images/just-woman.png" class="comment-banner-img" />
   </div>
 </div>
-<div class="worldmap-cover">
+<div class="worldmap-cover" id="worldmap">
   <div class="container">
     <h3>География услуг</h3>
-    <img src="/assets/images/geography.png" />
+    <div class="--desktop">
+      <img src="/assets/images/geography.png" alt="World map" />
+    </div>
+    <div class="--mobile">
+      <img src="/assets/images/mobile-worldmap.svg" alt="World map" />
+      <div class="worldmap-item">
+        Южная Америка
+      </div>
+      <div class="worldmap-description">
+        Перу, Чили, Колумбия
+      </div>
+      <div class="worldmap-item">
+        Африка
+      </div>
+      <div class="worldmap-description">
+        Марокко, Тунис
+      </div>
+      <div class="worldmap-item">
+        Азия
+      </div>
+      <div class="worldmap-description">
+        Россия, Казахстан, Индия, Малайзия, Сингапур, Мьянма, Филиппины, Индонезия
+      </div>
+    </div>
   </div>
 </div>
 <div class="feedback-cover">
