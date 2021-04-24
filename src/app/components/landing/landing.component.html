@@ -36,9 +36,9 @@
           <span class="advantage-circle"></span>
           <span class="advantage-line" [class.is-last]="isLast"></span>
         </div>
-        <p class="advantage-name">{{ advantage.name }}</p>
+        <p class="advantage-name">{{ advantage.name | translate }}</p>
         <p class="advantage-description">
-          {{ advantage.description }}
+          {{ advantage.description | translate }}
         </p>
       </div>
     </div>
@@ -51,18 +51,18 @@
       <div *ngFor="let howWork of landingData?.howWorks" class="how-works-item">
         <div class="how-works-number">{{ howWork.index }}</div>
         <p class="how-works-name">
-          {{ howWork.name }}
+          {{ howWork.name | translate }}
         </p>
         <div class="how-works-description">
-          {{ howWork.description }}
+          {{ howWork.description | translate }}
         </div>
       </div>
     </div>
     <div class="how-works-tasks">
       <div *ngFor="let howTask of landingData?.howTasks" class="how-task-item">
-        <a (click)="scrollToTop()" [routerLink]="howTask.link">{{ howTask.name }}</a>
+        <a (click)="scrollToTop()" [routerLink]="howTask.link">{{ howTask.name | translate }}</a>
         <div class="how-task-options">
-          <div *ngFor="let option of howTask.options" class="how-task-option">{{ option }}</div>
+          <div *ngFor="let option of howTask.options" class="how-task-option">{{ option | translate }}</div>
         </div>
       </div>
     </div>
@@ -74,11 +74,11 @@
       <h3>{{ 'CLIENT_REVIEWS' | translate }}</h3>
       <div class="comments-item">
         <img src="/assets/images/two-dots.png" class="two-dots" />
-        <div class="comment-content" [innerHTML]="landingData?.comments[currentCommentIndex].content"></div>
+        <div class="comment-content" [innerHTML]="landingData?.comments[currentCommentIndex].content | translate"></div>
         <div class="comment-info-cover m-t-30">
           <div>
-            <div class="comment-name">{{ landingData?.comments[currentCommentIndex].name }}</div>
-            <div class="comment-profession">{{ landingData?.comments[currentCommentIndex].profession }}</div>
+            <div class="comment-name">{{ landingData?.comments[currentCommentIndex].name | translate }}</div>
+            <div class="comment-profession">{{ landingData?.comments[currentCommentIndex].profession | translate }}</div>
             <div class="comment-dots">
               <button *ngFor="let dot of landingData?.comments; let i = index" (click)="setCurrent(i)"
                       type="button" class="comment-dot" [class.active]="currentCommentIndex == i">

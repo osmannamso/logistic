@@ -6,9 +6,9 @@
     </div>
     <div class="contact-items">
       <div *ngFor="let contact of landingData?.contacts" class="contact-item">
-        <div class="contact-city">{{ contact.city }}</div>
-        <div class="contact-name">{{ contact.name }}</div>
-        <div class="contact-street">{{ contact.street }}</div>
+        <div class="contact-city">{{ contact.city | translate }}</div>
+        <div class="contact-name">{{ contact.name | translate }}</div>
+        <div class="contact-street">{{ contact.street | translate }}</div>
         <div class="contact-ways">
           <div class="contact-way">
             <span class="icon-cover">

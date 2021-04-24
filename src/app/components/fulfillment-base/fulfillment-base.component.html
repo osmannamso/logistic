@@ -15,7 +15,7 @@
 <div class="base-step-cover">
   <div *ngFor="let step of landingData?.baseFulfillmentSteps; let i = index" class="base-step-item">
     <span class="base-number">{{ i + 1 }}</span>
-    <p class="base-step-name">{{ step.name }}</p>
-    <p class="base-step-description">{{ step.description }}</p>
+    <p class="base-step-name">{{ step.name | translate }}</p>
+    <p class="base-step-description">{{ step.description | translate }}</p>
   </div>
 </div>
