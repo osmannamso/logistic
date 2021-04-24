@@ -1,8 +1,8 @@
 <div class="contacts-cover" id="contacts">
   <div class="contacts-container">
-    <h3>Наши контакты</h3>
+    <h3>{{ 'OUR_CONTACTS' | translate }}</h3>
     <div class="contact-support">
-      Более 25 профессиональных центров обслуживания наших клиентов
+      {{ 'MORE_THAN_25_CUSTOMER' | translate }}
     </div>
     <div class="contact-items">
       <div *ngFor="let contact of landingData?.contacts" class="contact-item">
@@ -44,11 +44,11 @@
         Yermesgroup
       </div>
       <div class="footer-links-cover">
-        <a class="footer-link">Кто мы?</a>
-        <a class="footer-link">Услуги</a>
-        <a class="footer-link">Отзывы</a>
-        <a class="footer-link">География услуг</a>
-        <a class="footer-link">Контакты</a>
+        <a class="footer-link">{{ 'WHO_ARE_WE' | translate }}</a>
+        <a class="footer-link">{{ 'SERVICES' | translate }}</a>
+        <a class="footer-link">{{ 'REVIEWS' | translate }}</a>
+        <a class="footer-link">{{ 'SERVICES_GEOGRAPHY' | translate }}</a>
+        <a class="footer-link">{{ 'CONTACTS' |translate }}</a>
       </div>
     </div>
   </div>
@@ -56,33 +56,33 @@
     <div class="footer-container">
       <div class="footer-main-items">
         <div class="footer-main-item">
-          <p class="footer-main-head">О нас</p>
-          <a class="footer-main-text">Кто мы?</a>
-          <a class="footer-main-text">Услуги</a>
-          <a class="footer-main-text">Отзывы</a>
-          <a class="footer-main-text">География услуг</a>
-          <a class="footer-main-text">Контакты</a>
+          <p class="footer-main-head">{{ 'ABOUT_US' | translate }}</p>
+          <a class="footer-main-text">{{ 'WHO_ARE_WE' | translate }}</a>
+          <a class="footer-main-text">{{ 'SERVICES' | translate }}</a>
+          <a class="footer-main-text">{{ 'REVIEWS' | translate }}</a>
+          <a class="footer-main-text">{{ 'SERVICES_GEOGRAPHY' | translate }}</a>
+          <a class="footer-main-text">{{ 'CONTACTS' | translate }}</a>
         </div>
         <div class="footer-main-item --desktop">
-          <p class="footer-main-head">Услуги</p>
-          <a class="footer-main-text">Региональные складские помещения</a>
-          <a class="footer-main-text">Проверка наличия товаров по артикулам</a>
-          <a class="footer-main-text">Доставка</a>
-          <a class="footer-main-text">Приём заказов</a>
-          <a class="footer-main-text">Упаковка</a>
-          <a class="footer-main-text">Отслеживание статуса доставки</a>
+          <p class="footer-main-head">{{ 'SERVICES' | translate }}</p>
+          <a class="footer-main-text">{{ 'REGION_STOREHOUSE' | translate }}</a>
+          <a class="footer-main-text">{{ 'ARTICUL_PRODUCT_CHECK' | translate }}</a>
+          <a class="footer-main-text">{{ 'DELIVERY' | translate }}</a>
+          <a class="footer-main-text">{{ 'GET_ORDER' | translate }}</a>
+          <a class="footer-main-text">{{ 'PACKING' | translate }}</a>
+          <a class="footer-main-text">{{ 'PACK_TRACKING' | translate }}</a>
         </div>
         <div class="footer-main-item">
-          <p class="footer-main-head">Контакты</p>
-          <a class="footer-main-text">г. Алматы, ул. Абая 27, офис 67</a>
-          <a class="footer-main-text">info@ges.kz</a>
-          <a class="footer-main-text">+7 727 399 94 04; +7 727 399 94 94;</a>
-          <a class="footer-main-text">+7 727 399 94 94</a>
+          <p class="footer-main-head">{{ 'CONTACTS' | translate }}</p>
+          <a class="footer-main-text">{{ 'STREET_INFO' | translate }}</a>
+          <a class="footer-main-text">{{ 'EMAIL_INFO' | translate }}</a>
+          <a class="footer-main-text">{{ 'PHONES_INFO' | translate }}</a>
+          <a class="footer-main-text">{{ 'PHONE_INFO' | translate }}</a>
         </div>
       </div>
     </div>
   </div>
   <div class="footer-bottom-cover">
-    © Copyright 2014 - 2021 GES. All Rights Reserved.
+    {{ 'COPYRIGHT_ALL_RIGHTS_RESERVED' | translate }}
   </div>
 </div>

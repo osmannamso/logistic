@@ -7,30 +7,29 @@
         <img src="/assets/images/white-logo.png" /> Yermesgroup
       </div>
       <div class="main-text">
-        Помогаем интернет-магазинам зарабатывать больше
+        {{ 'HELP_INTERNET_SHOPS' | translate }}
       </div>
       <div class="main-support">
-        Наш фулфилмент сервис освободит ваше время и ресурсы для маштабирования бизнеса
+        {{ 'OUR_FULFILLMENT_SERVICE' | translate }}
       </div>
     </div>
   </div>
 </div>
 <div class="support-cover" id="support">
   <div class="container">
-    <h3>Помогаем интернет-магазинам зарабатывать больше</h3>
+    <h3>{{ 'HELP_INTERNET_SHOPS' | translate }}</h3>
     <div class="support-info">
-      Добро пожаловать в  Yermesgroup, где мы специализируемся на решениях по выполнению заказов и логистике электронной коммерции для предприятий по всему миру.
+      {{ 'WELCOME_TO_YERMESGROUP' | translate }}
       <br /><br />
-      Наша дружная и эффективная команда предлагает гораздо больше, чем просто выполнение ваших заказов. Мы работаем в партнерстве с каждым из наших клиентов, создавая для них правильные логистические решения, которые помогают им развивать свои онлайн-продажи за рубежом и в странах СНГ. Тщательно понимая и обращаясь к потребностям наших клиентов, мы помогли многим в их росте от первоначальной отправки нескольких сотен заказов в месяц до многотысячных поставок по всему миру каждый месяц.
+      {{ 'OUR_FRIENDLY_TEAM' | translate }}
       <br /><br />
-      Мы упорно работаем, чтобы удовлетворить и превзойти ожидания наших клиентов, принимая все сложности логистики.
-      Доверьте Yermesgroup выполнение ваших заказов, как и многие другие.
+      {{ 'WE_HARD_WORK' | translate }}
     </div>
   </div>
 </div>
 <div class="advantages-cover">
   <div class="container">
-    <h3>Наши преимущества</h3>
+    <h3>{{ 'OUR_ADVANTAGES' | translate }}</h3>
     <div class="advantage-items">
       <div *ngFor="let advantage of landingData?.advantages; let isLast = last" class="advantage-item">
         <div class="advantage-geometry">
@@ -47,7 +46,7 @@
 </div>
 <div class="how-works-cover" id="how-works">
   <div class="container">
-    <h3>КАК ЭТО РАБОТАЕТ?</h3>
+    <h3>{{ 'HOW_IT_WORKS' | translate }}</h3>
     <div class="how-works-items">
       <div *ngFor="let howWork of landingData?.howWorks" class="how-works-item">
         <div class="how-works-number">{{ howWork.index }}</div>
@@ -72,7 +71,7 @@
 <div class="comments-cover" id="comments">
   <div class="position-relative container">
     <div class="comments-content">
-      <h3>Отзывы наших клиентов</h3>
+      <h3>{{ 'CLIENT_REVIEWS' | translate }}</h3>
       <div class="comments-item">
         <img src="/assets/images/two-dots.png" class="two-dots" />
         <div class="comment-content" [innerHTML]="landingData?.comments[currentCommentIndex].content"></div>
@@ -95,55 +94,55 @@
 </div>
 <div class="worldmap-cover" id="worldmap">
   <div class="container">
-    <h3>География услуг</h3>
+    <h3>{{ 'SERVICES_GEOGRAPHY' | translate }}</h3>
     <div class="--desktop">
       <img src="/assets/images/geography.png" alt="World map" />
     </div>
     <div class="--mobile">
       <img src="/assets/images/mobile-worldmap.svg" alt="World map" />
       <div class="worldmap-item">
-        Южная Америка
+        {{ 'SOUTH_AMERICA' | translate }}
       </div>
       <div class="worldmap-description">
-        Перу, Чили, Колумбия
+        {{ 'PERU' | translate }}
       </div>
       <div class="worldmap-item">
-        Африка
+        {{ 'AFRICA' | translate }}
       </div>
       <div class="worldmap-description">
-        Марокко, Тунис
+        {{ 'MAROCCO' | translate }}
       </div>
       <div class="worldmap-item">
-        Азия
+        {{ 'ASIA' | translate }}
       </div>
       <div class="worldmap-description">
-        Россия, Казахстан, Индия, Малайзия, Сингапур, Мьянма, Филиппины, Индонезия
+        {{ 'RUSSIA' | translate }}
       </div>
     </div>
   </div>
 </div>
 <div class="feedback-cover">
   <div class="container">
-    <h3>Свяжитесь с нами</h3>
-    <div class="feedback-additional">Вы можете написать нам по любому интересующему вас вопросу: от консультации до сотрудничества</div>
+    <h3>{{ 'CONNECT_US' | translate }}</h3>
+    <div class="feedback-additional">{{ 'FEEDBACK_ADDITIONAL' | translate }}</div>
     <form class="form-group">
       <div class="form-name-phone">
         <label class="form-label">
-          <input type="text" placeholder="Введите ваше имя" class="form-control" />
+          <input type="text" placeholder="{{ 'ENTER_YOUR_NAME' | translate }}" class="form-control" />
         </label>
         <label class="form-label --phone">
-          <input type="text" placeholder="Введите ваш номер: +7 (- - -) - - -  - -  - -" class="form-control" />
+          <input type="text" placeholder="{{ 'ENTER_YOUR_PHONE' | translate }}: +7 (- - -) - - -  - -  - -" class="form-control" />
         </label>
       </div>
       <label class="form-label --comment">
-        <textarea placeholder="Введите ваш комментарий" class="form-control --comment"></textarea>
+        <textarea placeholder="{{ 'ENTER_YOUR_COMMENT' | translate }}" class="form-control --comment"></textarea>
       </label>
       <div class="form-additional">
         <span class="form-tip">
-          Заполняя данную форму, Вы соглашаетесь c <a>условиями обработки</a> персональных данных. Мы гарантируем конфиденциальность Вашего обращения!
+          {{ 'FORM_RULES' | translate }}
         </span>
         <button type="submit" class="form-btn">
-          Заказать звонок
+          {{ 'ORDER_CALL' | translate }}
         </button>
       </div>
     </form>

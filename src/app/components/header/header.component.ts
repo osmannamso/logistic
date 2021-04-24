@@ -1,6 +1,8 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {Languages} from '../../shared/variables/enums';
+import {StorageMethods} from "../../shared/helpers/storage-methods";
+import {LANGUAGE_KEY} from "../../shared/variables/values";
 
 @Component({
   selector: 'app-header',
@@ -10,6 +12,7 @@ import {Languages} from '../../shared/variables/enums';
 export class HeaderComponent implements OnInit {
   public isActiveMenu = false;
   public isActiveLanguage = false;
+  public currentLang: string;
 
   public languages = Languages;
 
@@ -18,7 +21,9 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private translateService: TranslateService
-  ) { }
+  ) {
+    this.setLanguage(StorageMethods.localStorageGetItem(LANGUAGE_KEY) || 'ru');
+  }
 
   ngOnInit(): void {
   }
@@ -45,5 +50,7 @@ export class HeaderComponent implements OnInit {
   public setLanguage(language: Languages): void {
     this.isActiveLanguage = false;
     this.translateService.setDefaultLang(language);
+    this.currentLang = language;
+    StorageMethods.localStorageSetItem(LANGUAGE_KEY, language);
   }
 }

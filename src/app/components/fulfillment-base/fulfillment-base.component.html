@@ -1,17 +1,17 @@
-<h3>Фулфилмент</h3>
+<h3>{{ 'FULFILLMENT' | translate }}</h3>
 <div class="base-description">
-  Фулфилмент — комплекс операций с момента оформления заказа покупателем и до момента получения им покупки. Термин используется без перевода. Как бизнес-услуга, фулфилмент наиболее востребован интернет-магазинами и часто передается на аутсорс фулфилмент-центрам
+  {{ 'FULFILLMENT_DESCRIPTION' | translate }}
 </div>
-<b class="base-bold">Преимущества</b>
+<b class="base-bold">{{ 'ADVANTAGES' | translate }}</b>
 <ul>
-  <li>Не нужен офис и склад</li>
-  <li>Оплата только за результат</li>
-  <li>100% безопастность</li>
-  <li>Свободное время</li>
-  <li>Десятки отзывов и письм довольных клиентов </li>
-  <li>Легкое маштабирование</li>
+  <li>{{ 'NO_NEED_FOR_WAREHOUSE_AND_OFFICE' | translate }}</li>
+  <li>{{ 'PAYMENT_ONLY_FOR_RESULT' | translate }}</li>
+  <li>{{ 'HUNDRED_PERCENT_SECURITY' | translate }}</li>
+  <li>{{ 'FREE_TIME' | translate }}</li>
+  <li>{{ 'TEN_EMAILS' | translate }}</li>
+  <li>{{ 'EASY_RESIZE' | translate }}</li>
 </ul>
-<h3 class="support-head">Услуга фулфилмент это:</h3>
+<h3 class="support-head">{{ 'FULFILLMENT_SERVICE_IS' | translate }}</h3>
 <div class="base-step-cover">
   <div *ngFor="let step of landingData?.baseFulfillmentSteps; let i = index" class="base-step-item">
     <span class="base-number">{{ i + 1 }}</span>

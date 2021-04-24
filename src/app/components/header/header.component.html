@@ -1,10 +1,10 @@
 <div class="header-top-cover">
   <div class="header-top-content container">
     <div class="header-top-info">
-      Многопрофильный фулфилмент сервис  “Yermesgroup”
+      {{ 'MULTIPROFILE_SERVICE_YERMESGROUP' | translate }}
     </div>
     <div class="header-top-language" #languageElement>
-      <a class="set-language" (click)="toggleLanguage()">RU</a>
+      <a class="set-language" (click)="toggleLanguage()">{{ currentLang }}</a>
       <div class="languages-cover" [hidden]="!isActiveLanguage">
         <a class="language-item" (click)="setLanguage(languages.RU)">RU</a>
         <a class="language-item" (click)="setLanguage(languages.EN)">EN</a>
@@ -18,12 +18,12 @@
       <img src="/assets/images/logo.png" />
       <span>Yermesgroup</span>
     </a>
-    <a class="header-link" href="#support">Кто мы?</a>
+    <a class="header-link" href="#support">{{ 'WHO_ARE_WE' | translate }}</a>
     <a class="header-link" href="#how-works">{{ 'SERVICES' | translate }}</a>
-    <a class="header-link" href="#comments">Отзывы</a>
-    <a class="header-link" href="#worldmap">География услуг</a>
-    <a class="header-link" href="#contacts">Контакты</a>
-    <a class="login-link">Личный кабинет / Вход</a>
+    <a class="header-link" href="#comments">{{ 'REVIEWS' | translate }}</a>
+    <a class="header-link" href="#worldmap">{{ 'SERVICES_GEOGRAPHY' | translate }}</a>
+    <a class="header-link" href="#contacts">{{ 'CONTACTS' | translate }}</a>
+    <a class="login-link">{{ 'PERSONAL_LOGIN' | translate }}</a>
   </div>
 </div>
 <div class="header-mobile-cover --mobile">
@@ -33,11 +33,11 @@
   <img src="/assets/images/logo.png" alt="Company logo" />
 </div>
 <div class="mobile-menu-cover" [class.active]="isActiveMenu">
-  <a class="mobile-menu-item" (click)="hideMenu()" href="#support">Кто мы?</a>
+  <a class="mobile-menu-item" (click)="hideMenu()" href="#support">{{ 'WHO_ARE_WE' | translate }}</a>
   <a class="mobile-menu-item" (click)="hideMenu()" href="#how-works">{{ 'SERVICES' | translate }}</a>
-  <a class="mobile-menu-item" (click)="hideMenu()" href="#comments">Отзывы</a>
-  <a class="mobile-menu-item" (click)="hideMenu()" href="#worldmap">География услуг</a>
-  <a class="mobile-menu-item" (click)="hideMenu()" href="#contacts">Контакты</a>
+  <a class="mobile-menu-item" (click)="hideMenu()" href="#comments">{{ 'REVIEWS' | translate }}</a>
+  <a class="mobile-menu-item" (click)="hideMenu()" href="#worldmap">{{ 'SERVICES_GEOGRAPHY' | translate }}</a>
+  <a class="mobile-menu-item" (click)="hideMenu()" href="#contacts">{{ 'CONTACTS' | translate }}</a>
   <button type="button" (click)="hideMenu()" class="menu-close-btn bare-btn">
     <img src="/assets/icons/close.png" alt="Close icon" />
   </button>
